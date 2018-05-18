@@ -1,0 +1,23 @@
+<main class="container">
+  <div class="columns is-multiline">
+
+    <% dogs.forEach(dog => { %>
+    <div class="column is-one-quarter-desktop is-half-tablet">
+      <a href="/dogs/<%= dog._id %>">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img src="<%= dog.image %>" alt="<%= dog.name %>">
+            </figure>
+          </div>
+          <div class="card-content">
+            <h3 class="title"><%= dog.name %></h3>
+            <h4 class="subtitle"><%= dog.origin %></h4>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% }) %>
+
+  </div>
+</main>

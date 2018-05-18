@@ -1,0 +1,56 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #EDCC8E;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+img {
+  height: 150px;
+  width: 120px;
+}
+
+button {
+  background-color: #EDCC8E;
+  border: 0;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.divider {
+  width: 100%;
+  height: 10px;
+  background-color: #4E608C;
+  margin-bottom: 50px;
+}
+
+.marbot {
+  margin-bottom: 50px;
+}
+.padtop {
+  padding-top: 100px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.child {
+}

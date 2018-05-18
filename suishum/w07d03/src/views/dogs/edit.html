@@ -1,0 +1,21 @@
+<form ng-submit="dogsEdit.handleSubmit()">
+  <div class="field">
+    <label for="name">Name</label>
+    <input class="input" placeholder="Name" name="name" ng-model="dogsEdit.dog.name" />
+  </div>
+  <div class="field">
+    <label for="name">Doggy description</label>
+    <input class="input" placeholder="Doggy Description" name="description" ng-model="dogsEdit.dog.description"/>
+  </div>
+  <div class="field">
+    <label for="name">Image</label>
+    <input class="input" placeholder="Image" name="image" ng-model="dogsEdit.dog.image" />
+  </div>
+  <div class="field">
+    <label for="name">Eyebrow length</label>
+    <input class="input" placeholder="Eyebrow Length" name="eyebrowLength" ng-model="dogsEdit.dog.eyebrowLength" />
+  </div>
+
+
+  <button class="button is-primary">Submit</button>
+</form>

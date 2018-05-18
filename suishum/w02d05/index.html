@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" charset="utf-8"></script>
+    <title>RPSLS</title>
+  </head>
+  <body>
+    <div class="title-page-container">
+      <div class="title-header">
+        <h2>Rock, Paper, Scissors, Lizard, Spock!</h2>
+        <div id="icons">
+          <div class="icon">
+            <img src="/img/rock.svg" alt="rock icon">
+          </div>
+          <div class="icon">
+            <img src="/img/paper.svg" alt="paper icon">
+          </div>
+          <div class="icon">
+            <img src="/img/scissors.svg" alt="scissors icon">
+          </div>
+          <div class="icon">
+            <img src="/img/lizard.svg" alt="lizard icon">
+          </div>
+          <div class="icon">
+            <img src="/img/spock.svg" alt="spock icon">
+          </div>
+        </div>
+      </div>
+      <div class="bottom-half">
+        <div class="how-to-play">
+          <p class="animated infinite pulse">HOW TO PLAY</p>
+        </div>
+        <div id="ready">
+          <p class="animated infinite pulse">READY?</p>
+        </div>
+      </div>
+    </div>
+    <div id="howToPlay" class="hidden">
+      <img src="/img/rpslsinfo.png" alt="Instructions on how to play rock, paper, scissors, lizard, spock">
+    </div>
+    <!-- game -->
+    <div class="game-outer-container hidden">
+      <div class="header">
+        <h1 class="animated infinite pulse">FIGHT!</h1>
+      </div>
+      <div class="container">
+        <div id="playerOne" class="in-play animated">
+        </div>
+        <div class="score-board">
+          <p>SCORE</p>
+          <p id="score">0 : 0</p>
+          <p id="winner">-</p>
+        </div>
+        <div id="playerTwo" class="in-play animated">
+        </div>
+      </div>
+      <div id="actions">
+        <div class="action-button animated infinite pulse">
+          <img id="rock" src="/img/rock.svg" alt="rock icon">
+        </div>
+        <div class="action-button animated infinite pulse">
+          <img id="paper" src="/img/paper.svg" alt="paper icon">
+        </div>
+        <div class="action-button animated infinite pulse">
+          <img id="scissors" src="/img/scissors.svg" alt="scissors icon">
+        </div>
+        <div class="action-button animated infinite pulse">
+          <img id="lizard" src="/img/lizard.svg" alt="lizard icon">
+        </div>
+        <div class="action-button animated infinite pulse">
+          <img id="spock" src="/img/spock.svg" alt="spock icon">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

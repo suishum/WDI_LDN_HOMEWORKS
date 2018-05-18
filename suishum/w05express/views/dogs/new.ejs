@@ -1,0 +1,28 @@
+<div class="container">
+  <%# THE METHOD HERE TELLS US WHAT WE WANT TO DO WITH OUR FORM, HERE WE ARE SENDING A POST REQUEST TO CHEESES WITH OUT FORM DATA %>
+  <form method="POST" action="/dogs">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <%# front end validation %>
+        <input class="input" name="name" type="text" placeholder="Name" required minlength="2">
+        <%# name attributes must be in line with the database fields %>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Country of Origin</label>
+      <div class="control">
+        <input class="input" name="origin" type="text" placeholder="Country of Origin" required minlength="2">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" name="image" type="text" placeholder="Image" required pattern="https?://.+">
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+    </div>
+  </form>
+</div>

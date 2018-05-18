@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="angularHackathon">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Hackathon</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="https://irt-cdn.multiscreensite.com/285cda67523c42d58f3cb1257a9c52c4/dms3rep/multi/desktop/coffee-beans-0-1920x434.png" alt="The Aldgate Grind">
+        &nbsp;
+        The Aldgate Grind
+      </a>
+
+      <div class="navbar-burger ng-class:clicked ? 'is-active' : 'is-not-active'" data-target="#mobile-menu" ng-click="clicked = !clicked" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="mobile-menu" class="navbar-menu ng-class:clicked ? 'is-active' : 'is-not-active'">
+      <div class="navbar-end">
+        <a class="navbar-item" ng-click="clicked = !clicked" ui-sref="ordersIndex">All Orders</a>
+        <a class="navbar-item" ng-click="clicked = !clicked" ui-sref="ordersNew">New Order</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">The Aldgate Grind</h1>
+      <h2 class="subtitle">Best made up coffee shop in Aldgate</h2>
+
+      <ui-view></ui-view>
+
+    </div>
+  </section>
+
+</body>
+</html>

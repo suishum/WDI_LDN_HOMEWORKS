@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <figure class="image">
+        <img src="<%= dog.image %>" alt="<%= dog.name %>">
+      </figure>
+    </div>
+    <div class="column">
+      <h3 class="title"><%= dog.name %></h3>
+      <h4 class="subtitle"><%= dog.origin %></h4>
+      <div class="icon is-small">
+        <i class="fa fa-pencil"></i>
+      </div>
+
+      <ul>
+        <% dog.comments.forEach(comment => { %>
+          <li><%= comment.content %>
+          <form method="POST" action="/dogs/<%= dog._id %>/comments/<%= comment._id %>">
+            <input type="hidden" name"_method" value="DELETE">
+            <button class="button is-danger">Delete</button>
+          </form></li>
+          <% }) %>
+      </ul>
+
+      <% if(locals.isAuthenticated) { %>
+        <%# add the edit button %>
+        <a href="/dogs/<%= dog._id %>/edit" class="button is-primary">Edit</a>
+        <%# add the delete button %>
+        <form action="/dogs/<%= dog._id %>" method="POST">
+          <%# method override stuff %>
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="button is-danger">Delete</button>
+        </form>
+
+        <form method="POST" action="/dogs/<%= dog._id %>/comments">
+          <textarea class="textarea" name="content"></textarea>
+          <button class="button is-primary">Submit</button>
+        </form>
+      <% } %>
+    </div>
+  </div>
+</div>

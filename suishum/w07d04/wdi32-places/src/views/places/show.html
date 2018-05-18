@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img ng-src="{{ placesShow.place.image }}" alt="{{ placesShow.place.name }}" />
+    </figure>
+  </div>
+  <div class="card-content">
+    <h4>{{ placesShow.place.name }}</h4>
+    <p>{{ placesShow.place.address }}</p>
+    <p>{{ placesShow.place.rating }} ⭐️</p>
+
+    <!-- there is no need to use handlebars for the center attribute because we have told our google-map.js we want to treat this as an object -->
+    <google-map zoom="14" center="placesShow.place.location"></google-map>
+
+    <a ui-sref="placesEdit({ id: placesShow.place._id })" class="button">Edit</a>
+    <button class="button is-danger" ng-click="placesShow.remove()">Delete</button>
+  </div>
+</div>

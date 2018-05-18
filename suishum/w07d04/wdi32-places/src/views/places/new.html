@@ -1,0 +1,47 @@
+<form ng-submit="placesNew.handleSubmit()">
+  <div class="field">
+    <label for="name">Name</label>
+    <input class="input" placeholder="Name" name="name" ng-model="placesNew.newPlace.name" />
+  </div>
+  <div class="field">
+    <label for="name">Address</label>
+    <!-- DO THE SAME FOR EDIT PAGE -->
+    <input class="input google-autocomplete" location="placesNew.newPlace.location" address="placesNew.newPlace.address" placeholder="Address" name="address" ng-model="placesNew.newPlace.address"/>
+    <!-- <input class="lat" type="hidden" ng-model="placesNew.newPlace.location.lat"/>
+    <input class="lng" type="hidden" ng-model="placesNew.newPlace.location.lng"/> -->
+  </div>
+  <div class="field">
+    <label for="name">Image</label>
+    <input class="input" placeholder="Image" name="image" ng-model="placesNew.newPlace.image" />
+  </div>
+  <div class="field">
+    <label for="name">Rating</label>
+    <div class="control">
+      <div class="select">
+        <select name="rating" ng-model="placesNew.newPlace.rating">
+          <option selected disabled value="">Please choose</option>
+          <option value="1">⭐️</option>
+          <option value="2">⭐️⭐️</option>
+          <option value="3">⭐️⭐️⭐️</option>
+          <option value="4">⭐️⭐️⭐️⭐️</option>
+          <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label for="name">Price</label>
+    <div class="control">
+      <div class="select">
+        <select name="price" ng-model="placesNew.newPlace.price">
+          <option selected disabled value="">Please choose</option>
+          <option>£</option>
+          <option>££</option>
+          <option>£££</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <button class="button is-primary">Submit</button>
+</form>

@@ -1,0 +1,138 @@
+/* font face */
+@font-face {
+  font-family: "againts";
+  src: url("fonts/againts.otf"),
+       url("fonts/againts.ttf"),
+       url("fonts/Againts.woff") format("woff"),
+       url("fonts/Againts.eot") format("embedded-opentype");
+       font-weight: normal;
+       font-style: normal;
+}
+
+/* title page styles */
+.title-page-container {
+  width: calc(100vw - 15%);
+  margin: 20px auto;
+  background-color: #2E249A;
+  border-radius: 10%;
+}
+
+.title-header {
+  height: 500px;
+  transform: translateY(40px);
+}
+
+h2 {
+  font-size: 76px;
+  text-align: center;
+  transform: translateY(100px);
+}
+
+#icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bottom-half {
+  height: calc(100vh - 615px);
+  text-align: center;
+}
+
+.how-to-play, #ready {
+  transform: translateY(-70px);
+  cursor: pointer;
+}
+
+/* how to play pop up  */
+#howToPlay {
+  position: absolute;
+  top: 13%;
+  left: 22%;
+  height: 600px;
+  width: 600px;
+}
+
+/* actual game styles */
+* {
+  font-family: 'againts';
+  color: #D91158;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-outer-container {
+  width: calc(100vw - 15%);
+  margin: 20px auto;
+  background-color: #2E249A;
+  border-radius: 10%;
+}
+
+.header {
+  height: 150px;
+  text-align: center;
+  transform: translate(40px, 30px);
+}
+
+h1 {
+  transform: translate(50px, 15px);
+  font-size: 100px;
+  letter-spacing: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  height: calc(100vh - 450px);
+
+}
+
+.in-play {
+  width: 400px;
+  height: 95%;
+  padding-top: 24px;
+}
+
+.score-board {
+  text-align: center;
+  width: 100px;
+}
+
+p {
+  transform: translateY(30px);
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+#winner {
+  font-size: 30px;
+}
+
+#actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-button {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+img {
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 24px;
+}

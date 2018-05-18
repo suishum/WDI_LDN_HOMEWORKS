@@ -1,0 +1,60 @@
+<!-- FILTERS -->
+<div class="field">
+  <!-- <label for="name">Name</label> -->
+  <div class="control">
+    <input type="text" class="input" ng-model="placesIndex.name" placeholder="Search...">
+  </div>
+</div>
+
+<div class="field">
+  <label for="name">Rating</label>
+  <div class="control">
+    <div class="select">
+      <select name="rating" ng-model="placesIndex.rating">
+        <option value="">All</option>
+        <option value="1">⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="field">
+  <label for="name">Price</label>
+  <div class="control">
+    <div class="select">
+      <select name="price" ng-model="placesIndex.price">
+        <option value="">All</option>
+        <option>£</option>
+        <option>££</option>
+        <option>£££</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<ul class="columns is-multiline">
+  
+  <li class="column is-one-quarter" ng-repeat="place in placesIndex.filtered">
+    <a ui-sref="placesShow({ id: place._id })">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image">
+            <img ng-src="{{ place.image }}" alt="{{ place.name }}" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <h4>{{ place.name }}</h4>
+          <p>{{ place.address }}</p>
+          <p>{{ place.rating }} ⭐️</p>
+          <p>{{ place.price }}</p>
+
+        </div>
+      </div>
+    </a>
+  </li>
+
+</ul>

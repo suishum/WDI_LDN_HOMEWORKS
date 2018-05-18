@@ -1,0 +1,30 @@
+<div class="container">
+  <%# THE METHOD HERE TELLS US WHAT WE WANT TO DO WITH OUR FORM, HERE WE ARE SENDING A PUT REQUEST TO CHEESES WITH OUT FORM DATA, ALSO REMEMBER TO CHANGE THE ACTION. REMEMBER TO 'yafrn add method-override' %>
+  <form method="POST" action="/dogs/<%= dog._id %>">
+    <%# add the line below so method-override knows what to do with this form %>
+    <input type="hidden" name="_method" value="PUT">
+
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="input" name="name" type="text" placeholder="Name" value="<%= dog.name %>" required>
+        <%# name attributes must be in line with the database fields, add values from database %>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Country of Origin</label>
+      <div class="control">
+        <input class="input" name="origin" type="text" placeholder="Country of Origin" value="<%= dog.origin %>" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Image</label>
+      <div class="control">
+        <input class="input" name="image" type="text" placeholder="Image" value="<%= dog.image %>" required>
+      </div>
+    </div>
+    <div class="control">
+      <button class="button is-primary">Submit</button>
+    </div>
+  </form>
+</div>

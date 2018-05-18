@@ -1,0 +1,61 @@
+<form ng-submit="ordersNew.handleSubmit()">
+  <!-- {{ ordersNew.newOrder }} -->
+  <div class="field">
+    <label for="name"><strong>Name</strong></label>
+    <input class="input" placeholder="Name" name="name" ng-model="ordersNew.newOrder.name" />
+  </div>
+
+  <div class="field">
+    <label for="name"><strong>Email</strong></label>
+    <input class="input" placeholder="Example@email.com" name="email" ng-model="ordersNew.newOrder.email"/>
+  </div>
+
+  <div class="field">
+    <label for="name"><strong>Order</strong></label>
+    <div class="control">
+      <label for="name">Beverage: &nbsp;</label>
+
+      <label ng-repeat="item in ordersNew.beverage" class="radio">
+        <input type="radio" name="beverage" value="{{ item._id }}" ng-model="ordersNew.newOrder.order.beverage">
+        {{ item.item }} ({{ item.price | currency : '£' }}) &nbsp;
+      </label>
+
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+
+      <label for="name">Extras (Optional): &nbsp;</label>
+      <label ng-repeat="item in ordersNew.extras" class="radio">
+        <input type="radio" name="extra1" value="{{ item._id }}" ng-model="ordersNew.newOrder.order.extra1">
+        {{ item.item }} ({{ item.price | currency : '£' }}) &nbsp;
+      </label>
+
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+
+      <label for="name">Extras (Optional): &nbsp;</label>
+      <label ng-repeat="item in ordersNew.extras" class="radio">
+        <input type="radio" name="extra2" value="{{ item._id }}" ng-model="ordersNew.newOrder.order.extra2">
+        {{ item.item }} ({{ item.price | currency : '£' }}) &nbsp;
+      </label>
+
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="name"><strong>Price</strong></label>
+    <div class="control">
+
+      <input type="hidden" value="{{ ordersNew.newOrder.orderTotal }}" ng-model="ordersNew.newOrder.orderTotal">
+      <h1 class="title">{{ ordersNew.newOrder.orderTotal | currency : '£' }}</h1>
+
+    </div>
+  </div>
+
+  <button class="button is-primary">Submit</button>
+</form>

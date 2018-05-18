@@ -1,0 +1,177 @@
+/*background color = #fafafa*/
+/*button blue = #3897f0*/
+/*border color = #e6e6e6*/
+/*footer link color = #003569*/
+/*text grey color = #999*/
+
+* {
+  box-sizing: border-box;
+  /* this makes text sharper */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, input {
+  font-family: 'Karla', sans-serif;
+
+}
+
+body {
+  background-color: #fafafa;
+  text-align: center;
+  padding-top: 30px;
+}
+
+p {
+  color: #999;
+  margin: 2px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.middle-align {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+p.black {
+  color: #000000;
+}
+
+p.more-padding {
+  padding-top: 30px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 8px auto;
+}
+
+.fblogin {
+  display: block;
+  margin: auto;
+}
+
+.fblogin, button {
+  padding: 8px 0;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color: #3897f0;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin-top: 0;
+}
+
+form {
+  padding: 15px 0;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+form input {
+  padding: 10px;
+}
+
+.link-color, li {
+  color: #003569;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0 5px;
+}
+
+div.appbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appbuttons img {
+  margin: 10px 5px 30px 5px;
+}
+
+footer p {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.phones {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    height: 100vh;
+  }
+
+  .mobile-content {
+    width: 480px;
+    padding-left: 10px;
+  }
+
+  .outermost-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phones {
+    display: unset;
+    padding-top: 80px;
+    padding-right: 10px;
+  }
+
+  footer {
+    padding-top: 10px;
+    overflow: auto;
+  }
+
+  footer nav {
+    float: left;
+  }
+
+  footer p {
+    float: right;
+  }
+
+}

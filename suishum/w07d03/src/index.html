@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="angularHackathon">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Hackathon</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" ui-sref="dogsHome">
+        <img src="https://pbs.twimg.com/profile_images/868497520661606400/R2yGkHEO_400x400.jpg" alt="Smug dog">
+        &nbsp;
+        Brow-WOW
+      </a>
+      <div class="navbar-burger" data-target="#mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="mobile-menu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" ui-sref="dogsIndex">All Dogs</a>
+        <a class="navbar-item" ui-sref="dogsNew">New Dog</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+
+  <!-- BACKGROUND STUFF -->
+  <div class="background">
+    <div class="black-block">
+    </div>
+    <div class="red-block">
+    </div>
+  </div>
+
+  <nav class="navbar foot">
+    <div class="navbar-end">
+      <p class="navbar-item no-hover">Made by Nic & Sui</p>
+    </div>
+  </nav>
+</body>
+</html>

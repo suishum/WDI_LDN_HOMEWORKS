@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', 'san-serif';
+  text-align: center;
+  font-size: 16px;
+}
+
+div {
+  border: 1px solid #FECC37;
+}
+
+p {
+  padding: 20px;
+}
+
+button {
+  padding: 20px;
+  border-radius: 30px;
+}
+
+input {
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  height: calc(100vh - 150px);
+  width: calc(100vw - 400px);
+  margin: 80px auto;
+  border-radius: 30px;
+  background-color: #FECC37;
+  overflow: hidden;
+}
+
+.animateBox {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeBox {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 25px auto;
+  background-color: #8ACDD4;
+}
+
+.timer {
+  transform: translateY(35px);
+  color: white;
+  font-size: 32px;
+}
+
+.goSubmit, .scoreBoard, .messageBoard {
+  height: 90px;
+}
+
+.go {
+  transform: translateY(15px);
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: center;
+}

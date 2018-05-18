@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img ng-src="{{ dogsShow.dog.image }}" alt="{{ dogsShow.dog.name }}" />
+    </figure>
+  </div>
+  <div class="card-content">
+    <h4>Name: {{ dogsShow.dog.name }}</h4>
+    <p>Doggy description: {{ dogsShow.dog.description }}</p>
+    <p>Eyebrow length: {{ dogsShow.dog.eyebrowLength }}</p>
+
+    <a ui-sref="dogsEdit({ id: dogsShow.dog._id })" class="button">Edit</a>
+    <button class="button is-danger" ng-click="dogsShow.remove()">Delete</button>
+  </div>
+</div>

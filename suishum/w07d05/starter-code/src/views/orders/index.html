@@ -1,0 +1,19 @@
+<ul class="columns is-multiline">
+
+  <li class="column is-full-width" ng-repeat="order in ordersIndex.orders">
+    <!-- <a ui-sref="ordersShow({ id: order._id })"> -->
+      <div class="card">
+
+        <div class="card-content">
+          <h4>Name: {{ order.name }}</h4>
+          <p>Email: {{ order.email }}</p>
+          <p>Order: {{ order.order.beverage.item }}</p>
+          <p>With: {{ order.order.extra1.item }} and {{ order.order.extra2.item }}</p>
+          <p>Total: {{ order.orderTotal | currency : '£' }}</p>
+
+        </div>
+      </div>
+    <!-- </a> -->
+  </li>
+
+</ul>

@@ -1,0 +1,39 @@
+* {
+  font-family: sans-serif;
+}
+
+div {
+  border: 1px solid #e3e3e3;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.progressBar {
+  width: 800px;
+  margin: 20px auto;
+  div#progress {
+    width: 0;
+    background-color: green;
+    height: 30px;
+  }
+}
+
+#message {
+  height: 40px;
+  text-align: center;
+  color: red;
+}
+
+div#donateButtons {
+  display: flex;
+  justify-content: space-around;
+  div#donateOne, div#donateFive, div#donateTen {
+    cursor: pointer;
+    width: 150px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

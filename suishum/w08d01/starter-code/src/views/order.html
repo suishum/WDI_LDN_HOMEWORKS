@@ -1,0 +1,60 @@
+<h1 class="subtitle">Place an order</h1>
+<form ng-submit="order.handleSubmit()">
+
+  <div class="field">
+    <label><strong>Name</strong></label>
+    <input class="input" placeholder="Name" ng-model="order.newOrder.name" />
+  </div>
+
+  <div class="field">
+    <label><strong>Email</strong></label>
+    <input class="input" placeholder="Email" ng-model="order.newOrder.email"/>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <label for="beverage"><strong>Select a beverage: &nbsp;</strong></label>
+      <label ng-repeat="beverage in order.beverages" class="radio">
+        <input type="radio" name="beverage" value="{{ beverage.item }}" ng-click="order.addBeverageToOrder(beverage); order.calculatePrice()">
+        {{ beverage.item }} ({{ beverage.price | currency : '£' }}) &nbsp;
+      </label>
+    </div>
+  </div>
+
+  <div class="field" ng-if="order.showExtra1">
+    <div class="control">
+      <label for="extra1"><strong>Select an extra (optional): &nbsp;</strong></label>
+      <label ng-repeat="extra in order.displayedExtras" class="radio">
+        <input type="radio" name="extra1" value="{{ extra.item }}" ng-click="order.addExtra1ToOrder(extra); order.calculatePrice()">
+        {{ extra.item }} ({{ extra.price | currency : '£' }}) &nbsp;
+      </label>
+    </div>
+  </div>
+
+  <div class="field" ng-if="order.showExtra2">
+    <div class="control">
+      <label for="extra2"><strong>Select an extra (optional): &nbsp;</strong></label>
+      <label ng-repeat="extra in order.displayedExtras" class="radio">
+        <input type="radio" name="extra2" value="{{ extra.item }}" ng-click="order.addExtra2ToOrder(extra); order.calculatePrice()">
+        {{ extra.item }} ({{ extra.price | currency : '£' }}) &nbsp;
+      </label>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="name"><strong>Price</strong></label>
+    <div class="control">
+      <input type="hidden" value="{{ order.newOrder.orderTotal }}" ng-model="order.newOrder.orderTotal">
+      <h1 class="title">{{ order.newOrder.orderTotal | currency : '£' }}</h1>
+    </div>
+  </div>
+
+  <button class="button is-primary">Submit</button>
+</form>
+<br/>
+<br/>
+<div ng-repeat="order in order.allOrders track by $index">
+  <h2 class="subtitle">Thank you for your order, {{ order.name }}. <br/>
+  You have ordered {{ order.order[0].item }} with {{ order.order[1].item }} and {{ order.order[2].item }}. <br/>
+  Your order costs {{ order.orderTotal | currency : '£' }}. <br/></h2>
+</div>

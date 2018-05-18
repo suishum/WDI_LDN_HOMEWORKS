@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="gifCity">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <title>Gif me!</title>
+</head>
+<body ng-controller="GifCtrl as gifs">
+<div class="full-width">
+  <div class="">
+    <h1 class="title">Gif City</h1>
+  </div>
+
+  <div class="">
+    <!-- <h2 class="subtitle">Search gifs</h2> -->
+    <form ng-submit="gifs.handleSubmit()">
+      <input class="input" type="text" ng-model="gifs.searchQuery" placeholder="Search for a gif here..">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <section class="">
+    <ul class="columns is-multiline">
+      <li class="column is-one-quarter" ng-repeat="gif in gifs.gifArray">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <img ng-src="{{ gif.images.downsized_medium.url }}" alt="{{ gif.title }}">
+            </figure>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="foot-space">
+    <button type="button" ng-click="gifs.plusTen()">Load more</button>
+  </div>
+</div>
+</body>
+</html>

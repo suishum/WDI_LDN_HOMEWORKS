@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="angularIntro">
+<head>
+  <meta charset="utf-8">
+  <title>WDI 32 Places</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCahmy9Pfnwcp96FwB1Uj_-xHRtbM-Psjg&libraries=places"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="/assets/images/ga-beer-logo.png" alt="WDI32 Places">
+        &nbsp;
+        WDI32 Places
+      </a>
+      <div class="navbar-burger" data-target="#mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div id="mobile-menu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" ui-sref="placesIndex">All Places</a>
+        <a class="navbar-item" ui-sref="placesNew">New Places</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">WDI 32 Places</h1>
+      <h2 class="subtitle">Friday nights enforced fun</h2>
+
+      <ui-view></ui-view>
+
+    </div>
+  </section>
+
+</body>
+</html>
